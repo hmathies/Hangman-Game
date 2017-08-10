@@ -1,0 +1,70 @@
+<html>
+<head>
+        <!-- <meta charset="UTF-8"> -->
+        <title>Hangwoman</title>
+</head>
+
+<body
+  window.onLoad= "startUp()"
+    <h1>Guess a letter</h1>
+    <input id="letter" type="text">
+    <input type="button" value="letter" onClick="Letter()"/>
+    <p id="answer"></p>
+    <p id="counter"></p>
+    <p id="stat"></p>
+    <p id="test"></p>
+
+<script type="text/javascript">
+      
+      var randomWordArr = ["pizza", "cake", "cookies", "candy", "scones"];
+	    var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
+      
+      var s;
+      var count = 0;
+      var answerArray = [];
+      
+      function startUp()
+      {
+      	for (var i = 0; i< randomWord.length; i++)
+        {
+        	answerArray[i] = "-";
+        }
+        
+        s = answerArray.join(" ");
+        document.getElementById("answer").innerHTML = s;
+      }
+      
+      function Letter()
+      {
+      	var letter = document.getElementById("letter").value;
+        	if (letter.length > 0)
+            {
+            	For (var j = 0; j < randomWord.length; j++)
+                {
+                	if (randomWord[i] === letter)
+                    {
+                    	answerArray[i] = letter;
+                    }
+                }
+                count++;
+                document.getElementById("counter").innerHTML = "No. of clicks: "" = " + count;
+                document.getElementById("answer").innerHTML = answerArray.join(" ");
+           }
+           
+           if(count > 5)
+           {
+           	document.getElementById("stat").innerHTML = "I know you can do better";
+           }
+</script> 
+
+  
+
+</body>
+           
+        
+
+
+</body>
+   
+
+</html>
